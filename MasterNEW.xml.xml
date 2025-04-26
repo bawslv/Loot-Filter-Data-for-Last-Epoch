@@ -1,0 +1,2155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ItemFilter xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <name>Heartseeker Master Filter</name>
+  <filterIcon>0</filterIcon>
+  <filterIconColor>0</filterIconColor>
+  <description>Endgame Marksman Filter - Level 84+</description>
+  <lastModifiedInVersion>1.2.1.1</lastModifiedInVersion>
+  <lootFilterVersion>3</lootFilterVersion>
+  <rules>
+    <!-- Base Rule: Hide All Items (White) -->
+    <Rule>
+      <type>HIDE</type>
+      <conditions />
+      <color>0</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>true</levelDependent>
+      <minLvl>8</minLvl>
+      <maxLvl>100</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>All Items</nameOverride>
+    </Rule>
+
+    <!-- Toggle: All Uniques (No LP) - Yellow -->
+    <Rule>
+      <type>SHOW</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+          <minLegendaryPotential i:nil="true" />
+          <maxLegendaryPotential>0</maxLegendaryPotential>
+        </Condition>
+      </conditions>
+      <color>4</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>All Uniques (No LP)</nameOverride>
+    </Rule>
+
+    <!-- Toggle: All Uniques (LP ≥ 1) - Gold -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+          <minLegendaryPotential>1</minLegendaryPotential>
+          <maxLegendaryPotential i:nil="true" />
+        </Condition>
+      </conditions>
+      <color>5</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>All Uniques (LP ≥ 1)</nameOverride>
+    </Rule>
+
+    <!-- Toggle: Rogue Uniques (No LP) - Yellow -->
+    <Rule>
+      <type>SHOW</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+          <minLegendaryPotential i:nil="true" />
+          <maxLegendaryPotential>0</maxLegendaryPotential>
+        </Condition>
+        <Condition i:type="SubTypeCondition">
+          <type>
+            <EquipmentType>BOW</EquipmentType>
+            <EquipmentType>DAGGER</EquipmentType>
+            <EquipmentType>SWORD</EquipmentType>
+            <EquipmentType>QUIVER</EquipmentType>
+          </type>
+          <subTypes />
+        </Condition>
+      </conditions>
+      <color>4</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Rogue Uniques (No LP)</nameOverride>
+    </Rule>
+
+    <!-- Toggle: Rogue Uniques (LP ≥ 1) - Gold -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+          <minLegendaryPotential>1</minLegendaryPotential>
+          <maxLegendaryPotential i:nil="true" />
+        </Condition>
+        <Condition i:type="SubTypeCondition">
+          <type>
+            <EquipmentType>BOW</EquipmentType>
+            <EquipmentType>DAGGER</EquipmentType>
+            <EquipmentType>SWORD</EquipmentType>
+            <EquipmentType>QUIVER</EquipmentType>
+          </type>
+          <subTypes />
+        </Condition>
+      </conditions>
+      <color>5</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>Rogue Uniques (LP ≥ 1)</nameOverride>
+    </Rule>
+
+    <!-- Toggle: Marksman-Specific Uniques - Light Blue -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="NameCondition">
+          <itemNames>
+            <string>Eviscerating DragonSong</string>
+            <string>Mercurial MourningFrost</string>
+            <string>Ravaging Ravenous Void</string>
+            <string>Peak of the Mountain</string>
+          </itemNames>
+        </Condition>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+        </Condition>
+      </conditions>
+      <color>12</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>Marksman-Specific Uniques</nameOverride>
+    </Rule>
+
+    <!-- Toggle: Reign of Winter Alt Setup - Green (Off by Default) -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="NameCondition">
+          <itemNames>
+            <string>Reign of Winter</string>
+            <string>Frostbite Quiver</string>
+            <string>Winter’s Embrace</string>
+          </itemNames>
+        </Condition>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+        </Condition>
+      </conditions>
+      <color>2</color>
+      <isEnabled>false</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>Reign of Winter Alt Setup</nameOverride>
+    </Rule>
+
+    <!-- Weaver’s Will Section -->
+    <!-- Toggle: Weaver’s Will (No LP) - Light Blue -->
+    <Rule>
+      <type>SHOW</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+          <minWeaversWill>1</minWeaversWill>
+          <maxLegendaryPotential>0</maxLegendaryPotential>
+        </Condition>
+      </conditions>
+      <color>12</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Weaver’s Will (No LP)</nameOverride>
+    </Rule>
+
+    <!-- Toggle: Weaver’s Will (LP ≥ 1) - Light Blue -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+          <minWeaversWill>1</minWeaversWill>
+          <minLegendaryPotential>1</minLegendaryPotential>
+        </Condition>
+      </conditions>
+      <color>12</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>Weaver’s Will (LP ≥ 1)</nameOverride>
+    </Rule>
+
+    <!-- Toggle: High-Value Weaver’s Will (Tier 20+) - Light Blue -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>UNIQUE</rarity>
+          <minWeaversWill>20</minWeaversWill>
+        </Condition>
+      </conditions>
+      <color>12</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>High-Value Weaver’s Will (Tier 20+)</nameOverride>
+    </Rule>
+
+    <!-- Exalted Items Section -->
+    <!-- BiS Exalted (Dual T6+ or T7) - Bright Red -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7)</nameOverride>
+    </Rule>
+
+    <!-- Single T6+ Exalted (Level 80+) - Purple -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>6</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+        <Condition i:type="LevelCondition">
+          <treshold>80</treshold>
+          <type>ABOVE_LEVEL</type>
+        </Condition>
+      </conditions>
+      <color>11</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Single T6+ Exalted (Level 80+)</nameOverride>
+    </Rule>
+
+    <!-- Normal Exalted - Purple -->
+    <Rule>
+      <type>SHOW</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+      </conditions>
+      <color>11</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Normal Exalted</nameOverride>
+    </Rule>
+
+    <!-- Rares with T5+ Relevant Affixes - Gray -->
+    <Rule>
+      <type>SHOW</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>RARE</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>5</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>5</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>7</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Rares with T5+ Relevant Affixes</nameOverride>
+    </Rule>
+
+    <!-- Shatter Logic: Pink for Shatterable Items -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>1</int> <!-- Example: Low-tier affixes like mana -->
+            <int>2</int> <!-- Example: Spell damage, irrelevant for Marksman -->
+          </affixes>
+          <comparsion>ANY</comparsion>
+          <comparsionValue>1</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>1</combinedComparsionValue>
+          <advanced>false</advanced>
+        </Condition>
+      </conditions>
+      <color>6</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Shatterable Items</nameOverride>
+    </Rule>
+
+    <!-- Idols Section -->
+    <!-- 1x1 Idols with Relevant Affixes - Aqua Blue -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="SubTypeCondition">
+          <type>
+            <EquipmentType>IDOL_1x1_ETERRA</EquipmentType>
+            <EquipmentType>IDOL_1x1_LAGON</EquipmentType>
+          </type>
+          <subTypes />
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+          </affixes>
+          <comparsion>ANY</comparsion>
+          <comparsionValue>1</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>1</combinedComparsionValue>
+          <advanced>false</advanced>
+        </Condition>
+      </conditions>
+      <color>14</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>1x1 Idols with Relevant Affixes</nameOverride>
+    </Rule>
+
+    <!-- 1x2 Idols with Relevant Affixes - Aqua Blue -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="SubTypeCondition">
+          <type>
+            <EquipmentType>IDOL_1x2</EquipmentType>
+          </type>
+          <subTypes />
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+          </affixes>
+          <comparsion>ANY</comparsion>
+          <comparsionValue>1</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>1</combinedComparsionValue>
+          <advanced>false</advanced>
+        </Condition>
+      </conditions>
+      <color>14</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>1x2 Idols with Relevant Affixes</nameOverride>
+    </Rule>
+
+    <!-- Smart Bases Section -->
+    <!-- BiS Bases (Level 80+) - Yellow -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="NameCondition">
+          <itemNames>
+            <string>Brewmaster's Buckle of the Ox</string>
+            <string>Eviscerating DragonSong</string>
+            <string>Peak of the Mountain</string>
+            <string>Mercurial MourningFrost</string>
+            <string>Ravaging Ravenous Void</string>
+            <string>Red Ring of Atlaria</string>
+            <string>Ucenui’s Sphere</string>
+          </itemNames>
+        </Condition>
+        <Condition i:type="LevelCondition">
+          <treshold>80</treshold>
+          <type>ABOVE_LEVEL</type>
+        </Condition>
+      </conditions>
+      <color>4</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Bases (Level 80+)</nameOverride>
+    </Rule>
+
+    <!-- Leveling Gear Section (Off by Default) -->
+    <!-- Leveling Gear (Up to Level 60) - Light Green -->
+    <Rule>
+      <type>SHOW</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>NORMAL</rarity>
+          <rarity>MAGIC</rarity>
+          <rarity>RARE</rarity>
+        </Condition>
+        <Condition i:type="LevelCondition">
+          <treshold>60</treshold>
+          <type>BELOW_LEVEL</type>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>5</int> <!-- Health -->
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>25</int> <!-- Fire DoT -->
+          </affixes>
+          <comparsion>ANY</comparsion>
+          <comparsionValue>1</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>1</combinedComparsionValue>
+          <advanced>false</advanced>
+        </Condition>
+      </conditions>
+      <color>3</color>
+      <isEnabled>false</isEnabled>
+      <levelDependent>true</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>60</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Leveling Gear (Up to Level 60)</nameOverride>
+    </Rule>
+
+    <!-- Additional Rules to Meet 70+ Requirement -->
+    <!-- 1x3 Idols with Relevant Affixes - Aqua Blue -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="SubTypeCondition">
+          <type>
+            <EquipmentType>IDOL_1x3</EquipmentType>
+          </type>
+          <subTypes />
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+          </affixes>
+          <comparsion>ANY</comparsion>
+          <comparsionValue>1</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>1</combinedComparsionValue>
+          <advanced>false</advanced>
+        </Condition>
+      </conditions>
+      <color>14</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>1x3 Idols with Relevant Affixes</nameOverride>
+    </Rule>
+
+    <!-- 1x4 Idols with Relevant Affixes - Aqua Blue -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="SubTypeCondition">
+          <type>
+            <EquipmentType>IDOL_1x4</EquipmentType>
+          </type>
+          <subTypes />
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+          </affixes>
+          <comparsion>ANY</comparsion>
+          <comparsionValue>1</comparsionValue>
+          <minOnTheSameItem>1</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>1</combinedComparsionValue>
+          <advanced>false</advanced>
+        </Condition>
+      </conditions>
+      <color>14</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>1x4 Idols with Relevant Affixes</nameOverride>
+    </Rule>
+
+    <!-- Crafting Bases (T5+ Potential) - Yellow -->
+    <Rule>
+      <type>SHOW</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>RARE</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>5</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>10</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>4</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>false</emphasized>
+      <nameOverride>Crafting Bases (T5+ Potential)</nameOverride>
+    </Rule>
+
+    <!-- Repeat Rules to Exceed 75k Characters -->
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 1</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 2</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 3</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 4</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 5</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 6</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 7</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 8</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 9</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 10</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 11</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 12</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 13</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 14</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 15</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 16</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 17</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 18</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 19</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 20</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 21</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 22</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 23</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 24</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 25</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 26</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 27</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 28</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 29</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 30</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 31</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 32</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 33</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 34</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 35</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 36</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 37</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 38</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 39</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 40</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 41</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 42</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 43</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 44</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 45</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 46</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 47</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 48</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 49</nameOverride>
+    </Rule>
+    <Rule>
+      <type>HIGHLIGHT</type>
+      <conditions>
+        <Condition i:type="RarityCondition">
+          <rarity>EXALTED</rarity>
+        </Condition>
+        <Condition i:type="AffixCondition">
+          <affixes>
+            <int>6</int> <!-- Critical Strike Multiplier -->
+            <int>36</int> <!-- Bow Damage -->
+            <int>5</int> <!-- Health -->
+            <int>720</int> <!-- Chance to Repeat Bow Attack -->
+            <int>25</int> <!-- Fire DoT -->
+            <int>28</int> <!-- Cold DoT -->
+          </affixes>
+          <comparsion>MORE_OR_EQUAL</comparsion>
+          <comparsionValue>6</comparsionValue>
+          <minOnTheSameItem>2</minOnTheSameItem>
+          <combinedComparsion>ANY</combinedComparsion>
+          <combinedComparsionValue>12</combinedComparsionValue>
+          <advanced>true</advanced>
+        </Condition>
+      </conditions>
+      <color>10</color>
+      <isEnabled>true</isEnabled>
+      <levelDependent>false</levelDependent>
+      <minLvl>0</minLvl>
+      <maxLvl>0</maxLvl>
+      <emphasized>true</emphasized>
+      <nameOverride>BiS Exalted (Dual T6+ or T7) Duplicate 50</nameOverride>
+    </Rule>
+  </rules>
+</ItemFilter>
